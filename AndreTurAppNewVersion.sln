@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurAppNewVersion", "AndreTurAppNewVersion\AndreTurAppNewVersion.csproj", "{D73AD408-B85D-454A-B74C-2FD7A85F7F1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{2FEEB425-33CA-43A6-A511-C4E45012E64B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.Models", "AndreTurApp.Models\AndreTurApp.Models.csproj", "{C2BBE2FE-AF67-4781-ABF2-14F637DCAFEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.Services", "AndreTurApp.Services\AndreTurApp.Services.csproj", "{B857A337-DCB4-48B4-8651-03F35914AE8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServices", "MicroServices", "{BEFE5421-E1C4-4239-A3C5-3E3A61F7A53A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.CityService", "AndreTurApp.CityService\AndreTurApp.CityService.csproj", "{9D1A74EC-0656-442C-A3EE-C96267F4F3E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.AddressService", "AndreTurApp.AddressService\AndreTurApp.AddressService.csproj", "{3A6CD90C-71F6-4F59-B08F-7B1ABC673E67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.CustomerService", "AndreTurApp.CustomerService\AndreTurApp.CustomerService.csproj", "{86A765BC-BA8B-49AB-BD7E-7CB113956AEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.HotelService", "AndreTurApp.HotelService\AndreTurApp.HotelService.csproj", "{67801B46-8F64-4428-8A7F-C0BF47237095}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5BC372F2-E0AA-4169-8225-1A2811344D68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.TicketService", "AndreTurApp.TicketService\AndreTurApp.TicketService.csproj", "{2BEF3D6E-F1DD-4D52-A4C4-760FF43D0FF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurAppNewVersion.Test", "AndreTurAppNewVersion.Tests\AndreTurAppNewVersion.Test.csproj", "{6C6AF764-2B45-424A-AE89-9FD7B7CE8131}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreTurApp.PackageService", "AndreTurApp.PackageService\AndreTurApp.PackageService.csproj", "{9AFFB92A-3FEA-4F3D-86F5-220F93E60969}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D73AD408-B85D-454A-B74C-2FD7A85F7F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73AD408-B85D-454A-B74C-2FD7A85F7F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73AD408-B85D-454A-B74C-2FD7A85F7F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73AD408-B85D-454A-B74C-2FD7A85F7F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2BBE2FE-AF67-4781-ABF2-14F637DCAFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2BBE2FE-AF67-4781-ABF2-14F637DCAFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2BBE2FE-AF67-4781-ABF2-14F637DCAFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2BBE2FE-AF67-4781-ABF2-14F637DCAFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B857A337-DCB4-48B4-8651-03F35914AE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B857A337-DCB4-48B4-8651-03F35914AE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B857A337-DCB4-48B4-8651-03F35914AE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B857A337-DCB4-48B4-8651-03F35914AE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1A74EC-0656-442C-A3EE-C96267F4F3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1A74EC-0656-442C-A3EE-C96267F4F3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1A74EC-0656-442C-A3EE-C96267F4F3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1A74EC-0656-442C-A3EE-C96267F4F3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6CD90C-71F6-4F59-B08F-7B1ABC673E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6CD90C-71F6-4F59-B08F-7B1ABC673E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6CD90C-71F6-4F59-B08F-7B1ABC673E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6CD90C-71F6-4F59-B08F-7B1ABC673E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A765BC-BA8B-49AB-BD7E-7CB113956AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A765BC-BA8B-49AB-BD7E-7CB113956AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A765BC-BA8B-49AB-BD7E-7CB113956AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A765BC-BA8B-49AB-BD7E-7CB113956AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67801B46-8F64-4428-8A7F-C0BF47237095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67801B46-8F64-4428-8A7F-C0BF47237095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67801B46-8F64-4428-8A7F-C0BF47237095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67801B46-8F64-4428-8A7F-C0BF47237095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BEF3D6E-F1DD-4D52-A4C4-760FF43D0FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEF3D6E-F1DD-4D52-A4C4-760FF43D0FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEF3D6E-F1DD-4D52-A4C4-760FF43D0FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEF3D6E-F1DD-4D52-A4C4-760FF43D0FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C6AF764-2B45-424A-AE89-9FD7B7CE8131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6AF764-2B45-424A-AE89-9FD7B7CE8131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6AF764-2B45-424A-AE89-9FD7B7CE8131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6AF764-2B45-424A-AE89-9FD7B7CE8131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AFFB92A-3FEA-4F3D-86F5-220F93E60969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFFB92A-3FEA-4F3D-86F5-220F93E60969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFFB92A-3FEA-4F3D-86F5-220F93E60969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFFB92A-3FEA-4F3D-86F5-220F93E60969}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2BBE2FE-AF67-4781-ABF2-14F637DCAFEF} = {2FEEB425-33CA-43A6-A511-C4E45012E64B}
+		{B857A337-DCB4-48B4-8651-03F35914AE8C} = {2FEEB425-33CA-43A6-A511-C4E45012E64B}
+		{9D1A74EC-0656-442C-A3EE-C96267F4F3E7} = {BEFE5421-E1C4-4239-A3C5-3E3A61F7A53A}
+		{3A6CD90C-71F6-4F59-B08F-7B1ABC673E67} = {BEFE5421-E1C4-4239-A3C5-3E3A61F7A53A}
+		{86A765BC-BA8B-49AB-BD7E-7CB113956AEF} = {BEFE5421-E1C4-4239-A3C5-3E3A61F7A53A}
+		{67801B46-8F64-4428-8A7F-C0BF47237095} = {BEFE5421-E1C4-4239-A3C5-3E3A61F7A53A}
+		{2BEF3D6E-F1DD-4D52-A4C4-760FF43D0FF4} = {BEFE5421-E1C4-4239-A3C5-3E3A61F7A53A}
+		{6C6AF764-2B45-424A-AE89-9FD7B7CE8131} = {5BC372F2-E0AA-4169-8225-1A2811344D68}
+		{9AFFB92A-3FEA-4F3D-86F5-220F93E60969} = {BEFE5421-E1C4-4239-A3C5-3E3A61F7A53A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4BFCA91-5379-4B49-94B0-C387A89C7EF5}
+	EndGlobalSection
+EndGlobal
