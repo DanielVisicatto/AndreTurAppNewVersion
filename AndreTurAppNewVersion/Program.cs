@@ -1,9 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using AndreTurAppNewVersion.Data;
+﻿using AndreTurAppNewVersion.Services;
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<AndreTurAppNewVersionContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AndreTurAppNewVersionContext") ?? throw new InvalidOperationException("Connection string 'AndreTurAppNewVersionContext' not found.")));
 
 // Add services to the container.
 
@@ -11,6 +8,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<AddressService>();
+builder.Services.AddSingleton<CityService>();
+builder.Services.AddSingleton<CustomerService>();
+builder.Services.AddSingleton<TicketService>();
+builder.Services.AddSingleton<PackageService>();
+builder.Services.AddSingleton<HotelService>();
 
 var app = builder.Build();
 
