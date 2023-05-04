@@ -35,30 +35,30 @@ namespace AndreTurAppNewVersion.Services
                 throw new(e.Message);
             }
         }
-        public async Task<HttpStatusCode> PostCity(City city)
+        public async Task<City> PostCity(City city)
         {
             try
             {
                 HttpResponseMessage response = await CityService.cityClient.PostAsJsonAsync("https://localhost:7263/api/Cities", city);
                 response.EnsureSuccessStatusCode();
-                return HttpStatusCode.OK;
+                return city;
             }
-            catch (HttpRequestException)
+            catch (HttpRequestException e)
             {
-                return HttpStatusCode.Unauthorized;
+                throw new (e.Message);
             }
         }
-        public async Task<HttpStatusCode> PutCity(City city)
+        public async Task<City> PutCity(City city)
         {
             try
             {
                 HttpResponseMessage response = await CityService.cityClient.PutAsJsonAsync("https://localhost:7263/api/Cities", city);
                 response.EnsureSuccessStatusCode();
-                return HttpStatusCode.OK;
+                return city;
             }
-            catch (HttpRequestException)
+            catch (HttpRequestException e)
             {
-                return HttpStatusCode.Unauthorized;
+                throw new (e.Message);
             }
         }
         public async Task<HttpStatusCode> Delete(int id)

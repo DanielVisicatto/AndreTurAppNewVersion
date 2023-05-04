@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AndreTurApp.Models;
+using AndreTurAppNewVersion.Services;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +10,47 @@ namespace AndreTurAppNewVersion.Controllers
     [ApiController]
     public class CityController : ControllerBase
     {
+        private readonly CityService _cityService;
+
+        public CityController(CityService cityService)
+        {
+            _cityService = cityService;
+        }
+
         // GET: api/<CityController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<List<City>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _cityService.Get();
         }
 
         // GET api/<CityController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<City> GetById(int id)
         {
-            return "value";
+            return await _cityService.GeById(id);
         }
 
         // POST api/<CityController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<City> PostCity(City city)
         {
+            return await _cityService.PostCity(city);
         }
 
         // PUT api/<CityController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task <City> PutCity(int id, City city)
         {
+            city.Id = id;
+            return await _cityService.PutCity(city);
         }
 
         // DELETE api/<CityController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async void Delete(int id)
         {
+            _cityService.Delete(id);
         }
     }
 }

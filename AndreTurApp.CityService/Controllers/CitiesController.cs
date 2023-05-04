@@ -52,14 +52,9 @@ namespace AndreTurApp.CityService.Controllers
 
         // PUT: api/Cities/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCity(int id, City city)
-        {
-            if (id != city.Id)
-            {
-                return BadRequest();
-            }
-
+        [HttpPut]
+        public async Task<IActionResult> PutCity(City city)
+        {  
             _context.Entry(city).State = EntityState.Modified;
 
             try
@@ -68,7 +63,7 @@ namespace AndreTurApp.CityService.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CityExists(id))
+                if (!CityExists(city.Id))
                 {
                     return NotFound();
                 }

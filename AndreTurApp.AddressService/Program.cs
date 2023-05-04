@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using AndreTurApp.AddressService.Data;
+using AndreTurApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AndreTurAppAddressServiceContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AndreTurAppAddressServiceContext") ?? throw new InvalidOperationException("Connection string 'AndreTurAppAddressServiceContext' not found.")));
@@ -11,6 +13,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<PostOffice>();
 
 var app = builder.Build();
 

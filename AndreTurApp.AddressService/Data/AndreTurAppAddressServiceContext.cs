@@ -14,6 +14,7 @@ namespace AndreTurApp.AddressService.Data
         {
         }
 
-        public DbSet<AndreTurApp.Models.Address> Address { get; set; } = default!;
+        public DbSet<AndreTurApp.Models.City> City { get; set; } = default!;
+        public DbSet<AndreTurApp.Models.Address>? Address { get; set; } 
     }
 }

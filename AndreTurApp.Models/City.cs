@@ -7,5 +7,13 @@
         public string? Description { get; set; }
         public DateTime RegisterDate { get; set; }
         #endregion
+
+        #region[Ctor]        
+       // public City()
+        //{
+        //    RegisterDate = DateTime.Now;
+        //}
+        #endregion
+
     }
 }

@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AndreTurApp.Models\AndreTurApp.Models.csproj" />
+    <ProjectReference Include="..\AndreTurApp.Services\AndreTurApp.Services.csproj" />
   </ItemGroup>
 
 </Project>
