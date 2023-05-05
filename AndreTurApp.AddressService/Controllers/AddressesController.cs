@@ -44,13 +44,13 @@ namespace AndreTurApp.AddressService.Controllers
         {
             if (_context.Address == null)
             {
-                return NotFound();
+                return new Address();
             }
             var address = await _context.Address.Include(a => a.City).Where(c => c.Id == id).FirstOrDefaultAsync();
 
             if (address == null)
             {
-                return NotFound();
+                return new Address();
             }
 
             return address;
@@ -60,13 +60,10 @@ namespace AndreTurApp.AddressService.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<ActionResult<Address>> PutAddress(int id, AddressDTOPut requestDTO)
-        {
-            //if (id != address.Id)
-            //{
-            //    return BadRequest();
-            //}            
+        {                   
             var postAddress = await _context.Address.FindAsync(id); //objeto vindo desde o banco
 
+            postAddress.Id = requestDTO.Id;
             postAddress.Number = requestDTO.Number;
             postAddress.Complement = requestDTO.Complement;
 
@@ -80,7 +77,7 @@ namespace AndreTurApp.AddressService.Controllers
             {
                 if (!AddressExists(id))
                 {
-                    return NotFound();
+                    return new Address();
                 }
                 else
                 {
@@ -118,12 +115,12 @@ namespace AndreTurApp.AddressService.Controllers
 
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetAddress", new { id = address.Id }, address);
+            return  address;
         }
 
         // DELETE: api/Addresses/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAddress(int id)
+        public async Task<ActionResult< Address>> DeleteAddress(int id)
         {
             if (_context.Address == null)
             {
@@ -138,7 +135,7 @@ namespace AndreTurApp.AddressService.Controllers
             _context.Address.Remove(address);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return address;
         }
 
         private bool AddressExists(int id)
